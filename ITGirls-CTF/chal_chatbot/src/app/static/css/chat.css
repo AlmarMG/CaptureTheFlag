@@ -1,0 +1,94 @@
+html, body {
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;  
+}
+
+section {
+	background: #2C2F33;
+    position: relative;
+    padding: 0;
+    min-height: 100vh;
+}
+.vertical-align {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 100%;
+}
+.card {
+	background: #fff;
+    box-shadow: 13px 13px 28px 2px rgba(0, 0, 0, 0.035);
+    padding: 5px 15px;
+}
+
+.text {
+	display: inline-block;
+	color: #333;
+	border-bottom: solid 1px #2C2F33;
+	font-weight: bold;
+	font-size: 16px;
+	width: 100%;
+}
+
+.text p{
+	display: inline-block;
+	padding-left: 5px;
+}
+
+.online{
+	color:#43b581;	
+}
+
+.modal {
+	display: none; 
+	padding-top: 100px; 
+	width: 100%;
+	height: 100%;
+	background-color: rgba(44, 47, 51, 0.7);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+	background-color: #fff;
+	color: #333;
+	margin: auto;
+	padding: 20px;
+	border: none;
+	width: 45%;
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #2C2F33;
+	float: right;
+	font-size: 30px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #f04747;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+  .screen-name {
+	  float: right;
+  }
+
+  .modal-content-last {
+	background-color: #fff;
+	color: #333;
+	margin: auto;
+	padding: 20px;
+	border: none;
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+
+  img {
+	  border-radius: 5px;
+  }

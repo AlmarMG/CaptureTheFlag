@@ -1,0 +1,116 @@
+html{
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.btn.btn-primary.start{
+    margin-right: 10px!important;
+}
+
+a.btn.btn-primary.stop{
+    margin-right: 10px!important;
+}
+
+body{
+    background-color: #2d3034;
+}
+
+.flash-message{
+    margin-top: 10px;
+}
+
+.challenge-main, .flagcheck-main, .over-ons-main{
+    margin-top: 40px;
+}
+
+h1,h3,h4,h5,h6,a,td,tr{
+    color: #99AAB5 !important;
+}
+
+.btn-primary, .navbar-text{
+    background-color: #7289DA;
+    border-color: #7289DA;
+    color: #fff !important;
+    
+}
+
+.navbar-text {
+    padding-right: 40px;
+}
+
+th.uppertable{
+    background-color: #7289DA;
+    color: #fff;
+}
+
+.table{
+    border-color: #7289DA !important;
+}
+
+.nav-bg{
+    background: #7289DA;
+}
+
+.nav-bg a{
+    color: #fff !important;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    height: 565px;
+    background-color: white;
+}
+.title
+{
+    font-size: 25px;
+    color: black;
+}
+
+p{
+    color: black;
+}
+h4{
+    position: center;
+    color: black;
+
+}
+
+.img-pf{
+    border: 1px solid #2C2F33;
+    position: center;
+}
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+
+  .flag-alert{
+      width: 350px;
+      margin: 150px auto 0;
+  }
+
+  #buttons {
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+.card{
+    position:relative;
+    margin-bottom:30px;
+}
+
+.btn-primary.contact-btn{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+.img-oo{
+    height:200px;
+    width:200px;
+    border-radius:50%;
+}

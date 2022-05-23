@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Over ons{% endblock %}
+{% block content %}
+<main class="over-ons-main">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Over ons</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <div class="container">
+            <h2 class="text-center" style="padding: 15px 0;">Nordin el Assassi</h2>
+            <img class="mx-auto d-block img-oo" src="{{ url_for('static', filename='img/pf4.jpg') }}" alt="picture">
+            <p class="title text-center">Team leider</p>
+            <p class="text-center">Het lijkt mij erg leuk om meer zelf te programmeren
+              en te zien waar wij als groep tot in staat zijn. Ik hoop dat we iets moois gaan neerzetten waar we
+              allemaal trots op kunnen zijn.
+            </p>
+            <a href="mailto:nordin.el.assassi@hva.nl" class="btn btn-primary contact-btn">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <div class="container">
+            <h2 class="text-center" style="padding: 15px 0;">Juriaan de Nijs</h2>
+            <img class="mx-auto d-block img-oo" src="{{ url_for('static', filename='img/pf3.jpg') }}" alt="picture">
+            <p class="title text-center">Scrum-Master</p>
+            <p class="text-center">Ik ben erg benieuwd wat dit project voor ons gaat brengen. Ik heb veel zin om te starten en hoop dat 
+              we een mooi eindresultaat gaan neerzetten.
+            </p>
+            <a href="mailto:juriaan.de.nijs@hva.nl" class="btn btn-primary contact-btn">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <div class="container">
+            <h2 class="text-center" style="padding: 15px 0;">Almar Gemmel</h2>
+            <img class="mx-auto d-block img-oo"src="{{ url_for('static', filename='img/pf.jpg') }}" alt="picture">
+            <p class="title text-center">CERT</h4>
+            <p class="text-center">Dit is mijn eerste jaar Cyber Security. Ik vind dit een erg 
+            leuke opleiding. Ik heb veel zin in dit project en ben benieuwd 
+          hoe ons eindproduct eruit gaat zien.</p>
+            <a href="mailto:almar.gemmel@hva.nl" class="btn btn-primary contact-btn">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 offset-md-0 col-md-6 offset-lg-2 col-lg-4">
+        <div class="card">
+          <div class="container">
+            <h2 class="text-center" style="padding: 15px 0;">Danny van't Veer</h2>
+            <img class="mx-auto d-block img-oo" src="{{ url_for('static', filename='img/pf2.jpg') }}" alt="picture">
+            <p class="title text-center">Teamlid</h4>
+            <p class="text-center">Dit is mijn eerste jaar CS en vindt het erg leuk. Ik verwacht een erg leuk en
+          uitdagend project. Ik kijk erg uit naar het eindproduct en hoop 
+          dat we wat moois neer gaan zetten.</p>
+            <a href="mailto:danny.van.t.veer@hva.nl" class="btn btn-primary contact-btn">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 offset-md-3 offset-lg-0 col-md-6 col-lg-4">
+        <div class="card">
+          <div class="container">
+            <h2 class="text-center" style="padding: 15px 0;">Stijn Luijkx</h2>
+            <img class="mx-auto d-block img-oo"src="{{ url_for('static', filename='img/pf5.jpg') }}" alt="picture">
+            <p class="title text-center">Teamlid</h4>
+            <p class="text-center">Ik vind de opleiding Cyber Security tot nu toe erg leuk. Van dit project hoop ik
+              nog beter te worden in codes schrijven. Ik ben erg benieuwd naar het eindresultaat
+              en hoop wat moois neer te zetten.
+            </p>
+            <a href="mailto:stijn.luijkx@hva.nl" class="btn btn-primary contact-btn">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

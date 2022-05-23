@@ -1,0 +1,50 @@
+html{
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0 30px;
+}
+
+.intro {
+	color: #99AAB5;
+  text-align: center;
+}
+
+.encodedchat {
+	background-color: #2c2f33;
+	padding: 15px;
+  border-radius: 10px;
+}
+
+.titel {
+	color: #99AAB5;
+  border-bottom: #99AAB5 solid 2px;
+}
+
+.chat1, .chat2, .chat3{
+  word-wrap: break-word;
+  border-radius: 5px;
+  background-color: #7289da;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+.chat1 {
+  margin: 10px 0;
+  width: 60%;
+}
+
+.chat2 {
+  background-color: #8d7625;
+  margin: 15px 0;
+  width: 60%;
+  margin-left: auto;
+}
+  
+.chat3 {
+  width: 60%;
+  margin: 15px 0;
+}

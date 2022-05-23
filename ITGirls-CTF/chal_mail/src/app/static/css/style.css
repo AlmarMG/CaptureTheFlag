@@ -1,0 +1,37 @@
+.form-signin {
+    border: 2px solid #3d3d3d;
+    border-radius: 10px;
+    width: 40%;
+    margin-left: 30%;
+    background-color: #23272a;
+    margin-top: 20%;
+    padding: 1%;
+}
+
+body {
+    background-color: #2C2F33;
+}
+
+/* Knoppen */
+.w-100 {
+    background-color: #7289DA;
+    border-color: #7289DA;
+}
+
+.w-100:hover {
+    background-color: #9a72da;
+    border-color: #9a72da;;
+}
+
+.form-control {
+    background-color: #99AAB5;
+    color: #fff;
+}
+
+.fw-normal {
+    color: white;
+}
+
+h1 {
+    color: #99AAB5;
+}

@@ -1,0 +1,1 @@
+function hmm(){alert("hmm")}window.onkeydown=function(e){78===e.keyCode&&alert("Geheim geheugen steuntje voor mijn CVV code: Maak het woord af.\nCC-CVV = '503'")};

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nokia | FLAG!!!!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.convform.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+</head>
+
+<!-- Rechter muisknop uitschakelen maar blijkbaar heb je nog steeds de sourcecode gevonden :((( -->
+<body oncontextmenu="return false">
+    <div id="modal" class="modal">
+		<div class="modal-content-last">
+		  <p id="modal-text">Hier is je flag: flag(9c58b7cb81515f3)</p>
+          <img src="{{url_for('static', filename='img/congrats.gif')}}" />
+		</div>
+	</div>
+	<section>
+	    <div class="vertical-align">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-8 col-sm-offset-2 col-xs-offset-0">
+	                    <div class="card no-border">
+							<div class="text">
+								<p>Naam: Frank v2</p><p>-</p><p class="online">online</p><p class="screen-name">Scherm: 4</p>
+							</div>
+	                        <div id="chat" class="conv-form-wrapper">
+	                            <form class="hidden" id="form">
+									<input type="text" data-conv-question="Gefeliciteerd {{ name }}! Nu is mijn maker falliet en worden er nooit meer AI chatbots mishandeld!!" data-no-answer="true">
+									<input type="text" data-conv-question="Als het goed is krijg je zo een popup met je flag...." data-no-answer="true">
+                                    <select name="hulp" data-conv-question="Dit is de beste dag van mijn leven HAHAHAHAHAHAHA">
+	                                    <option value="oh" data-callback="test">Uhh maar nu worden jou servers ook uitgezet....</option>
+	                                </select>
+                                    <input type="text" data-conv-question="NEEEEEEEEEEEEEEEEEEEEEEEEE">
+	                            </form>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery-1.12.3.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='scripts/autosize.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery.convform.js') }}"></script>
+	<script>
+		jQuery(function($){
+			convForm = $('#chat').convform({selectInputStyle: 'disable'});
+		});
+        function test(e,t){var n=document.getElementById("modal"),o=document.getElementById("form"),l=document.getElementsByClassName("close")[0],s=document.getElementsByClassName("online")[0];var geluidEffect=new Audio("{{url_for('static', filename='mp3/congrats.mp3')}}");geluidEffect.play();n.style.opacity=.1,n.style.transition="opacity 0.8s",n.style.display="block",setTimeout(function(){s.textContent="offline",s.style.color="#f04747"},2e3),setTimeout(function(){n.style.opacity=1}),l.onclick=function(){n.style.display="none",o.submit()},window.onclick=function(e){e.target==n&&(n.style.display="none",o.submit())},t()}
+	</script>
+</body>
+</html>

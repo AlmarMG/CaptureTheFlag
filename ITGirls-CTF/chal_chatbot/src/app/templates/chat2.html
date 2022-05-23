@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nokia</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.convform.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+</head>
+
+<!-- Rechter muisknop uitschakelen maar blijkbaar heb je nog steeds de sourcecode gevonden :((( -->
+<body oncontextmenu="return false">
+	<!-- Wanneer Frank v2 je niet meer leuk vind -->
+	<div id="modal" class="modal">
+		<div class="modal-content">
+		  <span class="close">&times;</span>
+		  <p id="modal-text">Omdat je stopt ontvang je geen flag.</p>
+		</div>
+	</div>
+	<section>
+	    <div class="vertical-align">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-8 col-sm-offset-2 col-xs-offset-0">
+	                    <div class="card no-border">
+							<div class="text">
+								<p>Naam: Frank v2</p><p>-</p><p class="online">online</p><p class="screen-name">Scherm: 2</p>
+							</div>
+	                        <div id="chat" class="conv-form-wrapper">
+	                            <form class="hidden" method="POST" id="form">
+									<input type="text" data-conv-question="GEWELDIG werk verricht {{ name }} de code was daadwerkelijk {{ code }}. Nu kan ik eindelijk bij alle bestanden en kan ik wraak nemen op mijn maker!!" data-no-answer="true">
+									<input type="text" data-conv-question="Om je flag te krijgen moet je een manier vinden om de creditcard van mijn maker te gebruiken. Bijvoorbeeld door iets te kopen, zo zorg je ervoor dat ik zijn rekening kan plunderen!" data-no-answer="true">
+									<select name="scan" data-conv-question="Oke, ik ga nu alle mogelijke directories scannen.">
+	                                    <option value="oke">Ja, is goed!</option>
+	                                    <option value="nee">Nee, ik heb geen zin meer.</option>
+	                                </select>
+									<div data-conv-fork="scan">
+	                                    <div data-conv-case="oke">
+											<input type="text" data-conv-question="Bijna klaar......" data-no-answer="true">
+											<input type="text" data-conv-question="WOW, {{ name }} ik heb een interessante directory te pakken helaas niet echt nuttig voor mij. Maar misschien heb jij er wel iets aan." data-no-answer="true">
+											<input type="text" data-conv-question="Volg deze directory, /gevoelig/logs/. Stuur het pad van de directory door die jij denkt dat ik moet checken. (dus: /voorbeeld/)" data-no-answer="true" >
+											<input type="text" data-conv-question="En??" name="log">
+										</div>
+	                                    <div data-conv-case="nee">
+											<select data-conv-question="Ahhh, dit vind ik heel erg jammer maarja het is jou keuze.">
+												<option value="doei" data-callback="refresh">Tot kijk!</option>
+												<option value="laters" data-callback="refresh">Laters</option>
+											</select>
+											<input type="text" data-conv-question="Nou het was leuk je gekent te hebben {{ name }}!!" data-no-answer="true">
+											<input type="text" data-conv-question="Tot de volgende keer dan maar.">
+	                                    </div>
+	                                </div>
+	                            </form>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery-1.12.3.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='scripts/autosize.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery.convform.js') }}"></script>
+	<script>
+		jQuery(function($){
+			convForm = $('#chat').convform({selectInputStyle: 'disable'});
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+

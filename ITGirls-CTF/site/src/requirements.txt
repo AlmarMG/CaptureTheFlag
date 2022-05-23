@@ -1,0 +1,9 @@
+requests
+mariadb
+Flask
+flask-bcrypt
+Flask-mail
+docker
+
+
+

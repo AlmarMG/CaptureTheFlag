@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Denied</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/denied.css') }}">
+    </head>
+    <style>
+        @font-face {
+            font-family: Silkscreen;
+            src: url("{{ url_for('static', filename='fonts/slkscr.ttf') }}");
+        }
+    </style>
+    <body oncontextmenu="return false">
+        <div class="container">
+            <div>403</div>
+            <div class="forbidden" onclick="hmm()">Forbidden</div>
+        </div>
+    </body>
+    <script>
+        function hmm(){
+            alert("hmm")
+        }
+    </script>
+</html>

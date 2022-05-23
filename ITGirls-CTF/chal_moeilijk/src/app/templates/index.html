@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--dit is de head-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+</head>
+<!--dit is de body-->
+<body>
+    <!--Hier is het begin van mijn content-->
+    <!--Supergeheime informatie hier te vinden-->
+    <!--Hopelijk komt niemand hierachter-->
+    <!--Dus niet verder lezen aub :)-->
+    <!--flag(dH9dhdDjeD984D1)-->
+    <h1>Challenge</h1>
+    <p>Mijn allereerste website, ik ben er zo blij mee :)</p>
+    <img src="{{ url_for('static', filename='img/foto.jpg') }}" />
+    <!--Hier heb ik een script gemaakt hihi-->
+    <script>
+        if (document.addEventListener) {
+            document.addEventListener('contextmenu', function (e) {
+                alert("Haha hier ga je niks vinden 😉"); //here you draw your own menu
+                e.preventDefault();
+            }, false);
+        } else {
+            document.attachEvent('oncontextmenu', function () {
+                alert("Haha hier ga je niks vinden 😉");
+                window.event.returnValue = false;
+            });
+        }
+    </script>
+</body>
+
+</html>

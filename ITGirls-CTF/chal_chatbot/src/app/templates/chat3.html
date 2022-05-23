@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nokia</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.convform.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+</head>
+
+<!-- Rechter muisknop uitschakelen maar blijkbaar heb je nog steeds de sourcecode gevonden :((( -->
+<body oncontextmenu="return false">
+	<div id="modal" class="modal">
+		<div class="modal-content">
+		  <span class="close">&times;</span>
+		  <p id="modal-text">Omdat je stopt ontvang je geen flag.</p>
+		</div>
+	</div>
+	<section>
+	    <div class="vertical-align">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-8 col-sm-offset-2 col-xs-offset-0">
+	                    <div class="card no-border">
+							<div class="text">
+								<p>Naam: Frank v2</p><p>-</p><p class="online">online</p><p class="screen-name">Scherm: 3</p>
+							</div>
+	                        <div id="chat" class="conv-form-wrapper">
+	                            <form class="hidden" method="POST" id="form">
+									<input type="text" data-conv-question="Oehh een shop, dit gaat leuk worden....." data-no-answer="true">
+									<input type="text" data-conv-question="We zijn er bijna {{ name }}! Het enige wat jij nu nog moet doen is alle informatie van mijn maker in de shop invullen!" data-no-answer="true">
+									<input type="text" data-conv-question="Om je leven wat makkelijker heb ik een lijst gemaakt van alle nuttige informatie van de logs, ga naar /gevoelig/lijst/" data-no-answer="true">
+									<input type="text" data-conv-question="Deze laaste taak kan wat moeite kosten dus onderschat het niet, als je de betalingscode hebt ontvangen kun je die hier invullen en kijk ik of de code klopt. Als de code klopt krijg je je beloning aka de flag. Tip: informatie start met CC." data-no-answer="true">
+									<input type="text" data-conv-question="En??" name="betalingscode">
+	                            </form>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery-1.12.3.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='scripts/autosize.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery.convform.js') }}"></script>
+	<script>
+		jQuery(function($){
+			convForm = $('#chat').convform({selectInputStyle: 'disable'});
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+

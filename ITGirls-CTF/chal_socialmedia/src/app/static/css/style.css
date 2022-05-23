@@ -1,0 +1,67 @@
+html{
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.btn.btn-primary.start{
+    margin-right: 10px!important;
+}
+
+body{
+    background-color: #2C2F33;
+}
+
+.challenge-main{
+    margin-top: 50px;
+}
+
+.over-ons-main{
+    margin-top: 50px;
+}
+
+h1,h2,h3,h4,h5,h6,p,a,td,tr{
+    color: #99AAB5 !important;
+}
+
+.btn-primary{
+    background-color: #7289DA;
+    border-color: #7289DA;
+    color: #fff !important;
+}
+
+th.uppertable{
+    background-color: #7289DA;
+    color: #fff;
+}
+
+.table{
+    border-color: #7289DA !important;
+}
+
+.nav-bg{
+    background: #7289DA;
+}
+
+.nav-bg a{
+    color: #fff !important;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+
+  svg.bi.bi-star-fill{
+    margin: 0 2.8px;
+  }
+
+  .flag-alert{
+      width: 350px;
+      margin: 150px auto 0;
+  }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Vlog challenge</title>
+</head>
+<body>
+  <header class="header">
+    <a href=" {{ url_for('home') }} ">
+      <img src="{{ url_for('static', filename='img/logo.png') }}" alt="ItGirlsTube Logo" class="youtube-logo" />
+    </a>
+    <form class="search-bar">
+      <input class="search-input" type="search" placeholder="Type hier de video in die u zoekt" aria-label="Search" />
+      <a class="btn btn-primary" href="#" role="button"> <img src="{{ url_for('static', filename='img/magnify.svg') }}" /></a>
+    <div class="menu-icons">
+      <a href="#">
+        <img src="{{ url_for('static', filename='img/video-plus.svg') }}" alt="Upload Video" />
+      </a>
+      <a href="#">
+        <img src="{{ url_for('static', filename='img/apps.svg') }}" alt="Apps" />
+      </a>
+      <a href="#">
+        <img src="{{ url_for('static', filename='img/bell.svg') }}" alt="Notifications" />
+      </a>
+      <a href="#">
+        <img class="menu-channel-icon" src="{{ url_for('static', filename='img/alberto.png') }}" alt="Your Channel" />
+      </a>
+    </div>
+  </header>
+  <div class="videos">
+    <section class="video-section">
+      <article class="video-container">
+        <a href=" {{ url_for('video') }} " class="thumbnail" data-duration="0:26">
+          <img class="thumbnail-image" src="{{ url_for('static', filename='img/thumbnail.png') }}" />
+        </a>
+        <div class="video-bottom-section">
+          <a href="#">
+            <img class="channel-icon" src="{{ url_for('static', filename='img/roblox.png') }}" />
+          </a>
+          <div class="video-details">
+            <a href=" {{ url_for('video') }} " class="video-title">Stijn's bureau tour</a>
+            <a href=" {{ url_for('home') }} " class="video-channel-name">Stijn's vlogs</a>
+            <div class="video-metadata">
+              <span>6 million views</span>
+              •
+              <span>1 week ago</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

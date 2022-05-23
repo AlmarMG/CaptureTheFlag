@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <title>Forgot-password</title>
+    <style>
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 4px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        .btn-primary {
+            padding: 14px 20px !important;
+            margin: 8px 0 !important;
+            border: none !important;
+            cursor: pointer !important;
+            width: 469px !important;
+            display: block;
+        }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        /* Center the image and position the close button */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        img.avatar {
+            width: 10%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+            width: 500px;
+            border: 0px !important;
+        }
+
+        form {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .butveld {
+            padding: 0px 16px;
+        }
+
+
+
+
+
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        body {
+            color: #6c7293;
+        }
+
+        .profile-navbar .nav-item .nav-link {
+            color: #6c7293;
+        }
+
+        .profile-navbar .nav-item .nav-link.active {
+            color: #464dee;
+        }
+
+        .profile-navbar .nav-item .nav-link i {
+            font-size: 1.25rem;
+        }
+
+        .profile-feed-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #e9e9e9;
+        }
+
+        .img-sm {
+            width: 43px;
+            height: 43px;
+        }
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.7.95/css/materialdesignicons.min.css">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href=" {{url_for('socialmedia')}} ">ITGirls-Gram</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href=" {{url_for('socialmedia')}} ">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Meer pagina's</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Meer mensen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Info</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href=" {{url_for('login')}} ">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="imgcontainer">
+        <img src="{{ url_for('static', filename='img/profile.png') }}" alt="Avatar" class="avatar">
+    </div>
+    <form id="form" method="post">
+
+        {%- with messages = get_flashed_messages(with_categories=true) -%}
+      {%- if messages -%}
+          {%- for category, message in messages -%}
+
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                <strong> {{ message }} </strong>
+            </div>
+
+          {%- endfor -%}
+      {%- endif -%}
+      {%- endwith %}
+
+
+        <div class="container">
+            <label for="uname_forgot"><b>Gebruikersnaam</b></label>
+            <input type="text" placeholder="Vul gebruikersnaam in" name="uname_forgot" required>
+
+            <label for="town_forgot"><b>Waar bent u geboren?</b></label>
+            <input type="text" placeholder="Vul geboorteplaats in" name="town_forgot" required>
+
+            <label for="psw_forgot"><b>Nieuw Wachtwoord</b></label>
+            <input type="password" placeholder="Vul wachtwoord in" name="psw_forgot" required>
+
+            <label for="psw_forgot2"><b>Bevestig Nieuw Wachtwoord</b></label>
+            <input type="password" placeholder="Bevestig wachtwoord" name="psw_forgot2" required>
+
+            <input class="btn btn-primary" type="submit" value="Verander Wachtwoord">
+        </div>
+    </form>
+    <div class="container butveld">
+        <a href=" {{ url_for('login') }} " style="width:auto;">Login</a>
+    </div>
+    <footer class="container">
+        <p class="mt-5 mb-3 text-muted text-center">&copy; 2021 - The IT Girls</p>
+    </footer>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

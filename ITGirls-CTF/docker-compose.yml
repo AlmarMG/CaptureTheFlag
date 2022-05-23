@@ -1,0 +1,83 @@
+version: '3'
+
+
+services:
+    # necessary data for connecting with mariadb
+    db:
+        image: database:latest
+        container_name: database
+        build: ./database/src/
+        volumes:
+        - ./database/src/sql:/docker-entrypoint-initdb.d/
+        environment:
+            MYSQL_ROOT_PASSWORD: 'ITGirls'
+            MYSQL_DATABASE: 'Gegevens'
+            MYSQL_USER: 'ITGirl'
+            MYSQL_PASSWORD: 'gm7fNbatwz'
+        ports: 
+            - "3306:3306"
+        networks:
+            - netwerk_db
+    
+    # main site container
+    site:
+        image: site:latest
+        container_name: site
+        build: ./site/src/
+        ports: 
+            - "80:80"
+            - "443:443"
+        networks: 
+            - netwerk_db
+        extra_hosts:
+            - "itgirls-ctf.localhost:127.0.0.1"
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+        depends_on:
+            - "db"
+        
+    # cookie challenge
+    cookie:
+        image: chal_cookie:latest
+        build: ./chal_cookie/src/
+
+    # socialmedia challenge
+    socialmedia:
+        image: chal_socialmedia:latest
+        build: ./chal_socialmedia/src/
+    
+    # encodedchat challenge
+    encodedchat:
+        image: chal_encodedchat:latest
+        build: ./chal_encodedchat/src/
+    
+    # wireshark challenge
+    wireshark:
+        image: chal_wireshark:latest
+        build: ./chal_wireshark/src/
+    
+    # chatbot challenge
+    chatbot:
+        image: chal_chatbot:latest
+        build: ./chal_chatbot/src/
+
+    # mail challenge
+    mail:
+        image: chal_mail:latest
+        build: ./chal_mail/src/
+
+    # moeilijk challenge
+    moeilijk:
+        image: chal_moeilijk:latest
+        build: ./chal_moeilijk/src/
+
+    # vlog challenge
+    vlog:
+        image: chal_vlog:latest
+        build: ./chal_vlog/src/
+
+networks:
+    netwerk_db:
+
+
+

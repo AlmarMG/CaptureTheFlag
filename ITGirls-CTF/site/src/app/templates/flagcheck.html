@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}FlagCheck{% endblock %}
+{% block content %}
+
+{%- with messages = get_flashed_messages(with_categories=true) -%}
+{%- if messages -%}
+    {%- for category, message in messages -%}
+    <div class="flash-message">
+        <div class="container">
+          <div class="col-12">
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+              <strong> {{ message }} </strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+{%- endif -%}
+{%- endwith -%} 
+
+<style>
+    .form-label{
+        color: #99AAB5 !important;
+    }
+
+    .flagcheck-main{
+	margin-top:180px;
+}
+
+
+</style>
+
+<main class="flagcheck-main">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <h1 style="text-align:center; padding-bottom: 10px;">FlagChecker</h1>
+          </div>
+      </div>
+      <div class="row">
+          <form method="POST">
+              <div class="row">
+        <div class="text-center">
+          <div class="col-md-4 offset-md-4">
+            <div class="input-group">
+              <input type="text" id="flag" placeholder="Bijv. 'flag(3jd92hd9s3jf03f)'" class="form-control" name="flag" aria-describedby="flagHelp" required>
+              <span id="check_button" class="input-group-btn">
+              <button type="submit" class="btn btn-primary" type="button">Check</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+                
+          </form>
+      </div>
+  </div>
+</main>
+
+{% endblock %}

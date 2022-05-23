@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Hints Mail challenge{% endblock %}
+{% block content %}
+<style>
+	#buttons {
+	  padding: 40px;
+	  text-align: center;
+	}
+	
+	.hints_encodedchat{
+		margin-top:50px;
+	}
+	
+	</style>
+{%- with messages = get_flashed_messages(with_categories=true) -%}
+{%- if messages -%}
+  {%- for category, message in messages -%}
+
+  <div class="flash-message">
+    <div class="container">
+      <div class="col-12">
+        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+          <strong> {{ message }} </strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {%- endfor -%}
+{%- endif -%}
+{%- endwith %} 
+<main class="hints_encodedchat">
+    <div class="container">
+        <div class="row" id="title">
+            <div class="col-md-12">
+                <h1 style="text-align:center;">Mail Challenge Hints</h1>
+            </div>
+        </div>	
+		<div class="row" id="hint_tabel">
+			<div class="col-md-12">
+			<table class="table table-bordered border-primary">
+				<thead>
+					<tr>
+						<th class="uppertable" scope="row" style="width:100px; text-align:center;"></th>
+						<th class="uppertable" scope="row" style="text-align:center;">Hint 1 (10 Punten)</th>
+						<th class="uppertable" scope="row" style="text-align:center;">Hint 2 (20 Punten)</th>
+						<th class="uppertable" scope="row" style="text-align:center;">Hint 3 (40 Punten)</th>
+					</tr>
+				</thead>
+				<tbody>	
+					{% for result in results %}
+					<tr>
+						<th scope="row" style="width:100px; text-align:center;">{{ result[0] }}</th>
+						<td colspan="3">{{ result[1] }}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+                <form method="POST">
+                    <input class="btn btn-primary" type="submit" value="Krijg Hint"/>
+                </form>    				
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

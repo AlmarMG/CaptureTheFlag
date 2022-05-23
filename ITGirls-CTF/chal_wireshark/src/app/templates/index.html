@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Wireshark challenge</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Onderschept netwerk verkeer</h1>
+            <p>Er is een conversatie tussen twee hosts onderschept. In deze conversatie zit data die je nodig hebt om in te loggen. 
+            Analyseer de data om erachter te komen wat de data is.</p>                
+            <a class="btn" href="{{ url_for('static', filename='netwerkverkeer.pcapng') }}" download><i class="fa fa-download"></i>Download</a>
+        </div>
+    </body>
+</html>

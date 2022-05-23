@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Ranglijst{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h1 class="row justify-content-center mt-5 ml-0">Ranglijst</h1>
+
+                    <table class="table table-responsive mt-5 table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th class="uppertable" scope="col">Positie</th>
+                                <th class="uppertable" scope="col">Gebruiker</th>
+                                <th class="uppertable" scope="col">Score</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>                        
+                            {% for user in data %}
+                                <tr>
+                                    <td>{{ loop.index }}</td>
+                                    <td>{{ user[0] }}</td>
+                                    <td>{{ user[1] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>   
+
+{% endblock %}
